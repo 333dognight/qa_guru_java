@@ -27,7 +27,34 @@ public class Main {
 
         //4. Логические &&, ||, !
 
+        //5. Массивы
+        int[] intArr = new int[] {1, 42, -100};
+        int[] intArr0 = new int[5];
+        intArr0[0] = 1;
+        intArr0[1] = 42;
+        intArr0[2] = -100;
+        intArr0[3] = -101;
+        intArr0[4] = 102;
+        int[][] twoDimensionalArray = new int[][] {intArr, intArr0};
 
+        for (int i = 0; i < intArr0.length; i++) {
+            if (intArr0[i] == -100) {
+                System.out.println("Found: " + intArr0[i]);
+                break; //можно выйти из цикла через return
+            }
+            System.out.println("Next iteration");
+        }
 
+        for (int element : intArr0) {
+            if (element == -101) {
+                System.out.println("Found: " + element);
+                break;
+            }
+        }
+
+        int indexForLoop = 0;
+        while (indexForLoop < intArr0.length) {
+            indexForLoop++;
+        }
     }
 }
