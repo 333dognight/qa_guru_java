@@ -1,5 +1,8 @@
 package ru.caranga;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         // целые числа
@@ -56,5 +59,11 @@ public class Main {
         while (indexForLoop < intArr0.length) {
             indexForLoop++;
         }
+
+        //Коллекции
+
+        List<Integer> intList0 = List.of(1, 42, -100);
+        List<Integer> intList1 = new ArrayList<>();
+        intList1.add(1);
     }
 }
