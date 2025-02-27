@@ -1,7 +1,6 @@
 package ru.caranga;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,14 +30,14 @@ public class Main {
         //4. Логические &&, ||, !
 
         //5. Массивы
-        int[] intArr = new int[] {1, 42, -100};
+        int[] intArr = new int[]{1, 42, -100};
         int[] intArr0 = new int[5];
         intArr0[0] = 1;
         intArr0[1] = 42;
         intArr0[2] = -100;
         intArr0[3] = -101;
         intArr0[4] = 102;
-        int[][] twoDimensionalArray = new int[][] {intArr, intArr0};
+        int[][] twoDimensionalArray = new int[][]{intArr, intArr0};
 
         for (int i = 0; i < intArr0.length; i++) {
             if (intArr0[i] == -100) {
@@ -65,5 +64,14 @@ public class Main {
         List<Integer> intList0 = List.of(1, 42, -100);
         List<Integer> intList1 = new ArrayList<>();
         intList1.add(1);
+
+        Set<String> stringSet = Set.of("Ivan", "Andrey"); //в Set только уникальные объекты. Не сохраняет последовательность добавленных объектов
+
+        Map<String, People> aMap = Map.of(
+                "1234", new People(),
+                "4321", new People()
+        );
+
+        aMap.get("1234"); //Map самый быстрый из коллекций, содержит связку ключ-значение
     }
 }
