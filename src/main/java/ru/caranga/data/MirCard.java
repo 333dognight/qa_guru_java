@@ -1,8 +1,16 @@
 package ru.caranga.data;
 
 public class MirCard extends Card {
-    @Override
-    void payInCountry(Country country, int amount) {
+    public MirCard() {
+        super(PaymentSystem.MIR);
+    }
+
+
+    protected boolean isCountryValidForTheseCard(Country country) {
+        if (country == Country.RU)
+            return true;
+        else
+            return false;
 
     }
 }

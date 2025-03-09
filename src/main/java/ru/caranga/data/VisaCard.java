@@ -1,8 +1,13 @@
 package ru.caranga.data;
 
 public class VisaCard extends Card {
-    @Override
-    void payInCountry(Country country, int amount) {
+    public VisaCard() {
+        super(PaymentSystem.VISA);
+    }
 
+
+    protected boolean isCountryValidForTheseCard(Country country) {
+
+        return true;
     }
 }
