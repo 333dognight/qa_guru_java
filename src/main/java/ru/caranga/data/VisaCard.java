@@ -1,6 +1,6 @@
 package ru.caranga.data;
 
-public class VisaCard extends Card {
+public class VisaCard extends Card implements ICard {
     public VisaCard() {
         super(PaymentSystem.VISA);
     }
